@@ -13,7 +13,10 @@ switch (mes)  {
         break;
     case "julio":
         alert("se vienen las vacaciones!!");
-        break;     
+        break;  
+    case "diciembre":
+        alert("felices fiestas capo!!!");
+        break;       
 
 }
 
