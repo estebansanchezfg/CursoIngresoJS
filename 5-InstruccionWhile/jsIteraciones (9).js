@@ -29,12 +29,12 @@ function mostrar()
 
 	var respuesta=true;
 
-	while(respuesta ==	true)
+	while(respuesta ==	true (o flag en el metodo flag ))
 	{
 		numero = prompt("ingrese un numero");
 		numero = parseInt(numero);
 
-		if (contador == 0){
+		if (contador == 0 (flag == true || numero > maximo){
 			maximo = numero;
 			minimo = numero;
 		}
@@ -53,7 +53,7 @@ function mostrar()
 			}
 		contador ++;
 		}
-
+flag = false
 		
 document.getelementbyid("maximo").value =maximo;
 document.getelementbyid("maximo").value =minimo;
