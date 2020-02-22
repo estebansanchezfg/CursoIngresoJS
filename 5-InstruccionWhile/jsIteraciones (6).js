@@ -1,17 +1,19 @@
 function mostrar()
 {
 
-	var contador=0;
-	var acumulador=0;
-	var promedio;
+	var contador = 0;
+	var acumulador = 0;
+	var numero;
 while(contador <5){
 
-numero = parseint(prompt("inserte un numero: "));
-suma = suma + numero;
-contador++
+numero =prompt("inserte un numero: ");
+numero = parseInt(numero);
+acumulador = acumulador + numero;
+
+contador++;
 }
 
 document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=promedio/5;
+document.getElementById('promedio').value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN
