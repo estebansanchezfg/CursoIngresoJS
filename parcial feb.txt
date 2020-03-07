@@ -1,0 +1,306 @@
+function mostrar()
+{
+	var contadorDeProductos;
+	var tipo;
+	var precio;
+	var cantidadDeUnidades;
+	var marca;
+	var fabricante;
+	var precioBarbijoMasCaro;
+	var precioBarbijoMasCaroCantidadDeUnidades;
+	var precioBarbijoMasCaroFabricante;
+	var bandera;
+	var cantidadDeUnidadesDelItemConMasUnidades;
+
+	bandera=0;
+	contadorDeProductos=0;
+
+	while(contadorDeProductos<5)
+	{
+		do
+		{
+			tipo=prompt("ingrese tipo productos barbijo, jabón, alcohol");
+		}
+		while(!isNaN(tipo) || tipo!="barbijo" && tipo!="jabón" && tipo!="alcohol");
+
+		do
+		{
+			precio=prompt("indique el precio");
+			precio=parseInt(precio);
+		}	
+		while(isNaN(precio) || precio>300 || precio<100);
+
+		do
+		{
+			cantidadDeUnidades=prompt("Indique cantidad de unidades");
+			cantidadDeUnidades=parseInt(cantidadDeUnidades);
+		}	
+		while(isNaN(cantidadDeUnidades) || cantidadDeUnidades<1 || cantidadDeUnidades>1000);
+
+		do
+		{
+			marca=prompt("indique la marca");
+		}
+		while(!isNaN(marca));
+
+		do
+		{
+			fabricante=prompt("indique fabricante");
+		}
+		while(!isNaN(fabricante));
+
+		if(tipo=="barbijo" && bandera==0 || precioBarbijoMasCaro<precio)
+		{
+			precioBarbijoMasCaro=precio;
+			precioBarbijoMasCaroFabricante=fabricante;
+			precioBarbijoMasCaroCantidadDeUnidades=cantidadDeUnidades;
+
+			
+		}
+
+		if(bandera==0 || itemMasCantidaDeUnidades<cantidadDeUnidades);
+		{
+			tipo
+			
+
+			bandera++;
+		}
+
+
+
+		
+		contadorDeProductos++;
+	}
+
+	console.info("item con mas unidades : "+itemMasCantidaDeUnidades);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mostrar()
+{
+	var peso;
+	var precioPorKilo;
+	var tipo;
+	var respuesta;
+	var bandera;
+	var descuento;
+	var precioTipoMasCaro;
+	var precioTipoMasCaroTipo;
+	var precio;
+	var precioTotalAPagarBruto;
+	var precioTotalAPagarConDescuento;
+	var acumuladorKilos;
+
+	respuesta="si";
+	bandera=0;
+	precio=precioPorKilo*peso;
+	acumuladorKilos=0;
+
+	while(respuesta=="si")
+	{
+		do
+		{
+			peso=prompt("indique peso");
+			peso=parseInt(peso);
+		}
+		while(isNaN(peso) || peso<10 || peso>100);
+
+		do
+		{
+			precioPorKilo=prompt("ingrese peso por kilo");
+			precioPorKilo=parseInt(precioPorKilo);
+		}
+		while(isNaN(precioPorKilo) || precioPorKilo<1);
+
+		do
+		{
+			tipo=prompt("indique v-vegetal a-animal m-mezcla");
+		}
+		while(!isNaN(tipo) || tipo!="v" && tipo!="a" && tipo!="m");
+
+		
+
+
+		if(bandera==0 || precioTipoMasCaro<precio)
+		{
+			precioTipoMasCaro=precio;
+			precioTipoMasCaroTipo=tipo;
+			bandera++;
+		}
+
+
+
+		acumuladorKilos=acumuladorKilos+
+
+		respuesta=prompt("indique si para continuar");
+	}
+
+	if(peso>100)
+		{
+			descuento=15;
+		}
+
+		if(peso>300)
+		{
+			descuento=25;
+		}
+
+
+	precioTotalAPagarBruto=precio;
+	precioTotalAPagarConDescuento=precio+precio/descuento;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mostrar()
+{
+	var nombre;
+	var edad;
+	var sexo;
+	var estadoCivil;
+	var respuesta;
+	var bandera;
+	var edadPasajeroMasViejo;
+	var edadPasajeroMasViejoSexo;
+	var edadPasajeroMasViejoNombre;
+	var hombreCasadoMasJoven;
+	var hombreCasadoMasJovenNombre;
+	var cantidadDeMujeresCasadasOViudas;
+	var contadorMujeres;
+	var acumuladorMujeres;
+	var promedioMujeres;
+	
+
+	respuesta="si";
+	bandera=0;
+	cantidadDeMujeresCasadasOViudas=0;
+	acumuladorMujeres=0;
+	contadorMujeres=0;
+
+	while(respuesta=="si")
+	{
+		do
+		{
+			nombre=prompt("indique nombre");
+		}
+		while(!isNaN(nombre));
+
+		do
+		{
+			edad=prompt("indique edad mayor a 18");
+			edad=parseInt(edad);
+		}
+		while(isNaN(edad) || edad<18 || edad>99);
+
+		do
+		{
+			sexo=prompt("indique sexo f o m");
+		}
+		while(!isNaN(sexo) || sexo!="f" && sexo!="m");
+
+		do
+		{
+			estadoCivil=prompt("estadoCivil: casado-soltero-viudo");
+		}
+		while(!isNaN(estadoCivil) || estadoCivil!="soltero" && estadoCivil!="casado" && estadoCivil!="viudo" );
+
+		if(sexo=="m" && estadoCivil=="casado" && bandera==0 || hombreCasadoMasJoven > edad)
+		{
+			hombreCasadoMasJoven=edad;
+			hombreCasadoMasJovenNombre=nombre;
+		}
+
+		if(bandera==0 || edadPasajeroMasViejo<edad)
+		{
+			edadPasajeroMasViejo=edad;
+			edadPasajeroMasViejoSexo=sexo;
+			edadPasajeroMasViejoNombre=nombre;
+
+			bandera++;
+		}
+
+		if(sexo=="f" && estadoCivil!="soltero")
+		{
+			cantidadDeMujeresCasadasOViudas++;	
+		}
+
+		if(sexo=="f")
+		{	
+			acumuladorMujeres=acumuladorMujeres+edad;
+			contadorMujeres++;
+		}
+
+		respuesta=prompt("indique si para continuar");
+	}
+
+	promedioMujeres=acumuladorMujeres/contadorMujeres;
+
+	console.info("nombre del hombre casado mas joven",hombreCasadoMasJovenNombre);
+	console.info("nombre del pasajero mas viejo",edadPasajeroMasViejoNombre);
+	console.info("sexo del pasajero mas viejo",edadPasajeroMasViejoSexo);
+	console.info("cantidad de cantidadDeMujeresCasadasOViudas : "+cantidadDeMujeresCasadasOViudas);
+	console.info("promedio edad mujeres",promedioMujeres);
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+}
